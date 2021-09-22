@@ -75,11 +75,10 @@ print(a)
 print('----------- 8')
 
 x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-y = x[::-1]
-mod = 1 if len(x) % 2 == 0 else 0
+mod = 0 if len(x) % 2 == 0 else 1
 z = []
 for i, j in enumerate(x):
-    z.append(j if i % 2 == 0 else y[i - mod])
+    z.append(j if i % 2 == 0 else x[-i-mod])
 print(z)
 
 print('----------- 10')
